@@ -51,4 +51,16 @@ class StudentRepositoryTest {
         System.out.println("Student List: " + studentList);
     }
 
+    @Test
+    public void printStudentByFirstName() {
+        List<Student> student = studentRepository.findByFirstNameIgnoreCase("ravi");
+        System.out.println(student);
+    }
+
+    @Test
+    public void printStudentByFirstNameCharacter() {
+        List<Student> student = studentRepository.findByFirstNameContaining("r");
+        System.out.println(student);
+    }
+
 }
