@@ -29,7 +29,7 @@ public class Student {
             strategy = GenerationType.SEQUENCE,
             generator = "student_sequence"
     )
-    private int studentId;
+    private Long studentId;
     private String firstName;
     private String lastName;
 
@@ -38,7 +38,10 @@ public class Student {
             nullable = false
     )
     private String emailId;
-    private String guardianName;
-    private String guardianEmail;
-    private String guardianMobile;
+//    private String guardianName;
+//    private String guardianEmail;
+//    private String guardianMobile;
+
+    @Embedded
+    private Guardian guardian;
 }
